@@ -1,0 +1,35 @@
+{
+  "name": "zschema",
+  "version": "0.0.0",
+  "description": "Schema validation and transformation library using Zod",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "rm -rf ./lib && tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cshaxu/zschema-js.git"
+  },
+  "keywords": [
+    "zod",
+    "json",
+    "schema"
+  ],
+  "author": "cshaxu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cshaxu/zschema-js/issues"
+  },
+  "homepage": "https://github.com/cshaxu/zschema-js#readme",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}
