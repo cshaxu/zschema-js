@@ -34,6 +34,7 @@ type JsonZodPrimitive =
   | z.ZodNumber
   | z.ZodString
   | z.ZodDate
+  | z.ZodCoercedDate<unknown>
   | z.ZodRecord<z.ZodString, any>;
 const isJsonSchemaPrimitive = (
   value: JsonSchemaValue,

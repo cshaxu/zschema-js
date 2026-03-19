@@ -8,7 +8,7 @@ declare const JSON_SCHEMA_PRIMITIVES: string[];
 type JsonSchemaPrimitive = typeof JSON_SCHEMA_PRIMITIVE_BOOLEAN | typeof JSON_SCHEMA_PRIMITIVE_DATE | typeof JSON_SCHEMA_PRIMITIVE_JSON | typeof JSON_SCHEMA_PRIMITIVE_NUMBER | typeof JSON_SCHEMA_PRIMITIVE_STRING;
 type JsonSchemaExtendedPrimitive = JsonSchemaPrimitive | string;
 type JsonContentPrimitive = boolean | number | string | Date | Record<string, any>;
-type JsonZodPrimitive = z.ZodBoolean | z.ZodNumber | z.ZodString | z.ZodDate | z.ZodRecord<z.ZodString, any>;
+type JsonZodPrimitive = z.ZodBoolean | z.ZodNumber | z.ZodString | z.ZodDate | z.ZodCoercedDate<unknown> | z.ZodRecord<z.ZodString, any>;
 declare const isJsonSchemaPrimitive: (value: JsonSchemaValue, extension?: JsonSchemaPrimitiveExtension) => value is JsonSchemaExtendedPrimitive;
 type JsonSchemaLiteral = `"${string}"`;
 type JsonContentLiteral = string;
